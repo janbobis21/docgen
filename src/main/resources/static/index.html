@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Municipality & Barangay Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Municipality – Barangay Lookup</h1>
+
+    <label for="municipalitySelect">Municipality</label>
+    <select id="municipalitySelect">
+      <option value="">-- Select Municipality --</option>
+    </select>
+
+    <table id="barangayTable" hidden>
+      <thead>
+        <tr>
+          <th>Barangay</th>
+          <th>Municipality</th>
+          <th>Province</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Bottom controls -->
+    <div class="actions">
+      <div class="doctype">
+        <span class="doctype-label">Document Type:</span>
+
+        <label class="radio">
+          <input type="radio" name="doctype" value="PDF" />
+          PDF
+        </label>
+
+        <label class="radio">
+          <input type="radio" name="doctype" value="CSV" />
+          CSV
+        </label>
+      </div>
+
+      <button id="printBtn" disabled>Print</button>
+    </div>
+
+    <p id="status" class="status" aria-live="polite"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
